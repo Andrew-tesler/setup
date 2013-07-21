@@ -20,6 +20,9 @@ sudo apt-get install -y geany
 # Install Minicom
 sudo apt-get install -y minicom
 
+# Install iperf (foe ethernet testing)
+sudo apt-get install -y iperf
+
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
 npm install -g jshint
