@@ -17,6 +17,8 @@ sudo apt-get install -y guake
 
 sudo apt-get install -y geany
 
+# Install Minicom
+sudo apt-get install -y minicom
 
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
