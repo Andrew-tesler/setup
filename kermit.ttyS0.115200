@@ -1,0 +1,7 @@
+#! /bin/bash
+
+PARAMS=(${0//./ })
+PORT=${PARAMS[1]}
+SPEED=${PARAMS[2]}
+
+sudo kermit -l /dev/${PORT} -b ${SPEED} -y ~/kermit.conf
