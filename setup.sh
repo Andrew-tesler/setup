@@ -44,12 +44,34 @@ sudo apt-add-repository -y ppa:cassou/emacs
 sudo apt-get update
 sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg
 
+# Install and configure tftpd server
 
+sudo apt-get install -y tftpd-hpa
+
+sudo mkdir /tftpdboot
+sudo cp $HOME/setup/tftpd-hpa /etc/default/tftpd-hpa
 
 cd $HOME
 # Make dotfiles dir in setup directory
 
-sudo mkdir /setup/dotfiles
+# Install nfs server
+sudo apt-get install -y nfs-kernel-server 
+sudo mkdir /export
+
+echo " Add the following line"
+sudo su
+sudo echo "/export *(rw,sync,no_subtree_check)" >> /etc/exports
+
+sudo service nfs-kernel-server restart
+
+
+# Copy kermit configuration files
+# kermit.ttyS0.115200 should be with 755 permissions
+sudo cp kermit.conf $HOME/
+sudo cp kermit.ttyS0.115200 /usr/local/bin
+
+exit
+#sudo mkdir /setup/dotfiles
 
 
 

@@ -1,0 +1,9 @@
+[user]
+	email = tesler.andrew@gmail.com
+	name = Andrew tesler
+[push]
+	default = simple
+
+[alias]
+	lg = log --pretty=format:'%Cgreen%h%Creset%Cred%d%Creset %s (%Cblue%ad%Creset - %Cgreen%an%Creset)' --date=short
+
