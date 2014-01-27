@@ -70,9 +70,10 @@ sudo service nfs-kernel-server restart
 sudo cp kermit.conf $HOME/
 sudo cp kermit.ttyS0.115200 /usr/local/bin
 
+
 exit
 #sudo mkdir /setup/dotfiles
-
+sudo apt-get install -y ckermit 
 
 
 #if [ -d ./dotfiles/ ]; then
