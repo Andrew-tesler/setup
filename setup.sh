@@ -34,6 +34,11 @@ npm install -g jshint
 # See: http://nodejs.org/api/repl.html#repl_repl
 sudo apt-get install -y rlwrap
 
+# ckermit install 
+sudo apt-get install -y ckermit
+
+# kde dialog box
+sudo apt-get install -y kde-baseapps-bin
 
 # Install screenlets
 # Widget like aplication
@@ -73,7 +78,8 @@ sudo cp kermit.ttyS0.115200 /usr/local/bin
 
 exit
 #sudo mkdir /setup/dotfiles
-sudo apt-get install -y ckermit 
+
+
 
 
 #if [ -d ./dotfiles/ ]; then
