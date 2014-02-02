@@ -63,18 +63,16 @@ cd $HOME
 sudo apt-get install -y nfs-kernel-server 
 sudo mkdir /export
 
-echo " Add the following line"
-sudo su
-sudo echo "/export *(rw,sync,no_subtree_check)" >> /etc/exports
-
-sudo service nfs-kernel-server restart
-
-
 # Copy kermit configuration files
 # kermit.ttyS0.115200 should be with 755 permissions
 sudo cp kermit.conf $HOME/
 sudo cp kermit.ttyS0.115200 /usr/local/bin
 
+echo " Add the following line"
+sudo su
+sudo echo "/export *(rw,sync,no_subtree_check)" >> /etc/exports
+
+sudo service nfs-kernel-server restart
 
 exit
 #sudo mkdir /setup/dotfiles
