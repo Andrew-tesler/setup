@@ -26,7 +26,22 @@ sudo apt-get install -y iperf
 # install ssh ( for remote login to this machine )
 sudo apt-get install -y ssh
 
+# install varius needed packages
+sudo apt-get install -y autoconf automake libtool texinfo build-essential xorg-dev libgtk2.0-dev libjpeg-dev libncurses5-dev libgif-dev libtiff-dev libm17n-dev libpng12-dev librsvg2-dev libotf-dev
+
+# clone emacs rep.
+git clone --depth 1 git://git.sv.gnu.org/emacs.git
+
+cd $HOME/emacs
+$HOME/emacs/./autogen.sh
+$HOME/emacs/./configure
+
+make $HOME/emacs/bootstrap
+sudo make install
+
+
 # Install jshint to allow checking of JS code within emacs
+
 # http://jshint.com/
 npm install -g jshint
 
