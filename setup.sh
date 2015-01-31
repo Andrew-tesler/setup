@@ -59,10 +59,12 @@ sudo apt-get install -y kde-baseapps-bin
 # Widget like aplication
 sudo apt-get install -y screenlets
 # Install emacs24
+sudo apt-get install -y emacs
+
 # https://launchpad.net/~cassou/+archive/emacs
-sudo apt-add-repository -y ppa:cassou/emacs
-sudo apt-get update
-sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg
+#sudo apt-add-repository -y ppa:cassou/emacs
+#sudo apt-get update
+#sudo apt-get install -y emacs24 emacs24-el emacs24-common-non-dfsg
 
 # Install and configure tftpd server
 
