@@ -18,7 +18,7 @@ sudo apt-get install -y guake
 sudo apt-get install -y geany
 
 # Install Minicom
-sudo apt-get install -y minicom
+#sudo apt-get install -y minicom
 
 # Install iperf (foe ethernet testing)
 sudo apt-get install -y iperf
@@ -30,14 +30,14 @@ sudo apt-get install -y ssh
 sudo apt-get install -y autoconf automake libtool texinfo build-essential xorg-dev libgtk2.0-dev libjpeg-dev libncurses5-dev libgif-dev libtiff-dev libm17n-dev libpng12-dev librsvg2-dev libotf-dev
 
 # clone emacs rep.
-git clone --depth 1 git://git.sv.gnu.org/emacs.git
+#git clone --depth 1 git://git.sv.gnu.org/emacs.git
 
-cd $HOME/emacs
-$HOME/emacs/./autogen.sh
-$HOME/emacs/./configure
+#cd $HOME/emacs
+#$HOME/emacs/./autogen.sh
+#$HOME/emacs/./configure
 
-make $HOME/emacs/bootstrap
-sudo make install
+#make $HOME/emacs/bootstrap
+#sudo make install
 
 
 # Install jshint to allow checking of JS code within emacs
@@ -71,7 +71,7 @@ sudo apt-get install -y tftpd-hpa
 sudo mkdir /tftpdboot
 sudo cp $HOME/setup/tftpd-hpa /etc/default/tftpd-hpa
 
-cd $HOME
+cd $HOME/setup
 # Make dotfiles dir in setup directory
 
 # Install nfs server
@@ -84,28 +84,28 @@ sudo cp kermit.conf $HOME/
 sudo cp kermit.ttyS0.115200 /usr/local/bin
 
 echo " Add the following line"
-sudo su
+
 sudo echo "/export *(rw,sync,no_subtree_check)" >> /etc/exports
 
 sudo service nfs-kernel-server restart
 
-exit
+
+
 #sudo mkdir /setup/dotfiles
 
 
 
-
-#if [ -d ./dotfiles/ ]; then
-#    mv dotfiles dotfiles.old
-#fi
+if [ -d ./dotfiles/ ]; then
+    mv dotfiles dotfiles.old
+fi
 #if [ -d .emacs.d/ ]; then
 #    mv .emacs.d .emacs.d~
 #fi
 
 
-#ln -sb setup/dotfiles/.screenrc .
-#ln -sb setup/dotfiles/.bash_profile .
-#ln -sb setup/dotfiles/.bashrc .
-#ln -sb setup/dotfiles/.bashrc_custom .
-#ln -sf setup/dotfiles/.emacs.d .
+ln -sb setup/dotfiles/.screenrc .
+ln -sb setup/dotfiles/.bash_profile .
+ln -sb setup/dotfiles/.bashrc .
+ln -sb setup/dotfiles/.bashrc_custom .
+ln -sf setup/dotfiles/.emacs.d .
 
