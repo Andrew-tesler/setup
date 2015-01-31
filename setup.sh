@@ -95,17 +95,19 @@ sudo service nfs-kernel-server restart
 
 
 
-if [ -d ./dotfiles/ ]; then
-    mv dotfiles dotfiles.old
-fi
+#if [ -d ./dotfiles/ ]; then
+#    mv dotfiles dotfiles.old
+#fi
 #if [ -d .emacs.d/ ]; then
 #    mv .emacs.d .emacs.d~
 #fi
 
+ln -sb ~/setup/dotFiles/.bashrc ~/.bashrc
+ln -sb ~/setup/dotFiles/.emacs.d ~/.emacs.d
 
-ln -sb setup/dotfiles/.screenrc .
-ln -sb setup/dotfiles/.bash_profile .
-ln -sb setup/dotfiles/.bashrc .
-ln -sb setup/dotfiles/.bashrc_custom .
-ln -sf setup/dotfiles/.emacs.d .
+#ln -sb setup/dotfiles/.screenrc .
+#ln -sb setup/dotfiles/.bash_profile .
+#ln -sb setup/dotfiles/.bashrc .
+#ln -sb setup/dotfiles/.bashrc_custom .
+#ln -sf setup/dotfiles/.emacs.d .
 
