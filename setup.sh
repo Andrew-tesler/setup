@@ -10,6 +10,9 @@ sudo apt-get install -y git-core
 # Install apache2 server
 sudo apt-get install -y apache2
 
+# tools to use userspace software suspend provided by Linux
+sudo apt-get install -y uswsusp
+
 # Install guake terinal
 sudo apt-get install -y guake
 
