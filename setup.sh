@@ -119,3 +119,6 @@ ln -sb ~/setup/dotFiles/bashrc ~/.bashrc
 #ln -sb setup/dotfiles/.bashrc_custom .
 #ln -sf setup/dotfiles/.emacs.d .
 
+# sudo visudo
+# $USER ALL=(ALL) NOPASSWD: ALL
+
