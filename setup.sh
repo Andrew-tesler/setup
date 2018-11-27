@@ -2,13 +2,15 @@
 # Simple setup.sh for configuring Ubuntu 13.04
 # for headless setup. for my personal Linux computer
 
+# Install htop
+sudo apt install -y htop
 
 
 # Install git
 sudo apt-get install -y git-core
 
 # Install apache2 server
-sudo apt-get install -y apache2
+#sudo apt-get install -y apache2
 
 # tools to use userspace software suspend provided by Linux
 sudo apt-get install -y uswsusp
@@ -17,11 +19,10 @@ sudo apt-get install -y uswsusp
 sudo apt-get install -y guake
 
 # Install geany
-
-sudo apt-get install -y geany
+#sudo apt-get install -y geany
 
 # Install Minicom
-#sudo apt-get install -y minicom
+sudo apt-get install -y minicom
 
 # Install iperf (foe ethernet testing)
 sudo apt-get install -y iperf
@@ -46,7 +47,7 @@ sudo apt-get install -y autoconf automake libtool texinfo build-essential xorg-d
 # Install jshint to allow checking of JS code within emacs
 
 # http://jshint.com/
-npm install -g jshint
+#npm install -g jshint
 
 # Install rlwrap to provide libreadline features with node
 # See: http://nodejs.org/api/repl.html#repl_repl
@@ -64,6 +65,7 @@ sudo apt-get install -y screenlets
 # Install emacs24
 sudo apt-get install -y emacs
 
+
 # https://launchpad.net/~cassou/+archive/emacs
 #sudo apt-add-repository -y ppa:cassou/emacs
 #sudo apt-get update
@@ -71,10 +73,10 @@ sudo apt-get install -y emacs
 
 # Install and configure tftpd server
 
-sudo apt-get install -y tftpd-hpa
+#sudo apt-get install -y tftpd-hpa
 
-sudo mkdir /tftpdboot
-sudo cp $HOME/setup/tftpd-hpa /etc/default/tftpd-hpa
+#sudo mkdir /tftpdboot
+#sudo cp $HOME/setup/tftpd-hpa /etc/default/tftpd-hpa
 
 cd $HOME/setup
 # Make dotfiles dir in setup directory
@@ -107,8 +109,9 @@ sudo service nfs-kernel-server restart
 #    mv .emacs.d .emacs.d~
 #fi
 
-ln -sb ~/setup/dotFiles/.bashrc ~/.bashrc
-ln -sb ~/setup/dotFiles/.emacs.d ~/.emacs.d
+
+ln -sb ~/setup/dotFiles/bashrc ~/.bashrc
+#ln -sb ~/setup/dotFiles/.emacs.d ~/.emacs.d
 
 #ln -sb setup/dotfiles/.screenrc .
 #ln -sb setup/dotfiles/.bash_profile .
